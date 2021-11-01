@@ -6,10 +6,15 @@ using System.Text;
 
 namespace SwapApp.Entities
 {
-    class Bid
+    public class Bid
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public DateTime BidDate { get; set; }
+
+
+        //Foreign Keys
+        public int ProductdID { get; set; }
+        public Product Product { get; set; }
     }
 }

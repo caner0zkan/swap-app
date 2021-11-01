@@ -1,0 +1,9 @@
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\bin\Debug\netcoreapp3.1\SwapApp.Entities.deps.json
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\bin\Debug\netcoreapp3.1\SwapApp.Entities.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\bin\Debug\netcoreapp3.1\SwapApp.Entities.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\obj\Debug\netcoreapp3.1\SwapApp.Entities.csproj.AssemblyReference.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\obj\Debug\netcoreapp3.1\SwapApp.Entities.AssemblyInfoInputs.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\obj\Debug\netcoreapp3.1\SwapApp.Entities.AssemblyInfo.cs
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\obj\Debug\netcoreapp3.1\SwapApp.Entities.csproj.CoreCompileInputs.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\obj\Debug\netcoreapp3.1\SwapApp.Entities.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Entities\obj\Debug\netcoreapp3.1\SwapApp.Entities.pdb

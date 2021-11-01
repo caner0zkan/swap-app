@@ -1,0 +1,15 @@
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.deps.json
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.runtimeconfig.json
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.runtimeconfig.dev.json
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.Entities.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\bin\Debug\netcoreapp3.1\SwapApp.Entities.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.csproj.AssemblyReference.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.AssemblyInfoInputs.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.AssemblyInfo.cs
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.csproj.CopyComplete
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.genruntimeconfig.cache

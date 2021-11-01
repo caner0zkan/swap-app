@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,5 +23,11 @@ namespace SwapApp.Entities
         public string Phone { get; set; }
         [StringLength(50)]
         public string Adress { get; set; }
+
+        public List<Product> Products { get; set; }
+
+
+        //Foreign Keys
+
     }
 }

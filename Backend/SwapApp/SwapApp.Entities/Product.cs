@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SwapApp.Entities
 {
-    class Product
+    public class Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
@@ -20,5 +20,19 @@ namespace SwapApp.Entities
         [StringLength(50)]
         public string Keywords { get; set; }
         public DateTime Date { get; set; }
+
+        public List<Image> Images { get; set; }
+        public List<Bid> Bids { get; set; }
+
+
+        //Foreign Keys
+        public int UserID { get; set; }
+        public User User { get; set; }
+
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
+
+        public int ProductStatusID { get; set; }
+        public ProductStatus ProductStatus { get; set; }
     }
 }
