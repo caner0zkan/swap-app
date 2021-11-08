@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapApp.Entities", "SwapApp.Entities\SwapApp.Entities.csproj", "{83B7E8BC-CC6A-44C0-9299-E443C57A1DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapApp.DataAccess", "SwapApp.DataAccess\SwapApp.DataAccess.csproj", "{809A9AFB-60CA-4174-BA6B-80B9A749AA22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapApp.DataAccess", "SwapApp.DataAccess\SwapApp.DataAccess.csproj", "{809A9AFB-60CA-4174-BA6B-80B9A749AA22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapApp.Business", "SwapApp.Business\SwapApp.Business.csproj", "{11CD4D8B-25E0-481E-B290-5903B2D1BD6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapApp.API", "SwapApp.API\SwapApp.API.csproj", "{506D497C-1EFB-4EC5-BA53-BAF5C0234B9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{809A9AFB-60CA-4174-BA6B-80B9A749AA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{809A9AFB-60CA-4174-BA6B-80B9A749AA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{809A9AFB-60CA-4174-BA6B-80B9A749AA22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CD4D8B-25E0-481E-B290-5903B2D1BD6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CD4D8B-25E0-481E-B290-5903B2D1BD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CD4D8B-25E0-481E-B290-5903B2D1BD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CD4D8B-25E0-481E-B290-5903B2D1BD6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506D497C-1EFB-4EC5-BA53-BAF5C0234B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506D497C-1EFB-4EC5-BA53-BAF5C0234B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506D497C-1EFB-4EC5-BA53-BAF5C0234B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506D497C-1EFB-4EC5-BA53-BAF5C0234B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
