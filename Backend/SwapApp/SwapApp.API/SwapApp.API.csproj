@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\SwapApp.Business\SwapApp.Business.csproj" />
+    <ProjectReference Include="..\SwapApp.Entities\SwapApp.Entities.csproj" />
   </ItemGroup>
 
 </Project>

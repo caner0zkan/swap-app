@@ -1,0 +1,14 @@
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.Business.deps.json
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.Business.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.Business.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.Entities.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.DataAccess.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\bin\Debug\netcoreapp3.1\SwapApp.Entities.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.csproj.AssemblyReference.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.AssemblyInfoInputs.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.AssemblyInfo.cs
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.csproj.CoreCompileInputs.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.csproj.CopyComplete
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.pdb
