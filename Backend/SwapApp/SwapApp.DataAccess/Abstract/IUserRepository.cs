@@ -5,16 +5,8 @@ using System.Text;
 
 namespace SwapApp.DataAccess.Abstract
 {
-    public interface IUserRepository
+    public interface IUserRepository: IRepository<User>
     {
-        List<User> GetAllUsers();
 
-        User GetUserById(int id);
-
-        void CreateUser(User user);
-
-        void UpdateUser(User user);
-
-        void DeleteUser(User user);
     }
 }

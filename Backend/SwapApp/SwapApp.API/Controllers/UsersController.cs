@@ -17,39 +17,39 @@ namespace SwapApp.API.Controllers
     {
         private IUserService _userService;
 
-        public UsersController()
+        public UsersController(IUserService userService)
         {
-            _userService = new UserManager();
+            _userService = userService;
         }
 
         [HttpGet]
         public List<User> Get()
         {
-            return _userService.GetAllUsers();
+            return _userService.GetAll();
         }
 
         [HttpGet("{id}")]
         public User Get(int id)
         {
-            return _userService.GetUserById(id);
+            return _userService.GetById(id);
         }
 
         [HttpPost]
         public void Post([FromBody] User user)
         {
-            _userService.CreateUser(user);
+            _userService.Create(user);
         }
 
         [HttpPut]
         public void Put([FromBody] User user)
         {
-            _userService.UpdateUser(user);
+            _userService.Update(user);
         }
 
         [HttpDelete("{id}")]
         public void Delete(User user)
         {
-            _userService.DeleteUser(user);
+            _userService.Delete(user);
         }
     }
 }

@@ -13,34 +13,34 @@ namespace SwapApp.Business.Concrete
 
         private IUserRepository _userRepository;
 
-        public UserManager()
+        public UserManager(IUserRepository userRepository)
         {
-            _userRepository = new UserRepository();
+            _userRepository = userRepository;
         }
 
-        public void CreateUser(User user)
+        public void Create(User entity)
         {
-            _userRepository.CreateUser(user);
+            _userRepository.Create(entity);
         }
 
-        public void DeleteUser(User user)
+        public void Delete(User entity)
         {
-            _userRepository.DeleteUser(user);
+            _userRepository.Delete(entity);
         }
 
-        public List<User> GetAllUsers()
+        public List<User> GetAll()
         {
-            return _userRepository.GetAllUsers();
+            return _userRepository.GetAll();
         }
 
-        public User GetUserById(int id)
+        public User GetById(int id)
         {
-            return _userRepository.GetUserById(id);
+            return _userRepository.GetById(id);
         }
 
-        public void UpdateUser(User user)
+        public void Update(User entity)
         {
-            _userRepository.UpdateUser(user);
+            _userRepository.Update(entity);
         }
     }
 }

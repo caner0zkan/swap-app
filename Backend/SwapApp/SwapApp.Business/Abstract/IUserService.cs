@@ -7,14 +7,14 @@ namespace SwapApp.Business.Abstract
 {
     public interface IUserService
     {
-        List<User> GetAllUsers();
+        List<User> GetAll();
 
-        User GetUserById(int id);
+        User GetById(int id);
 
-        void CreateUser(User user);
+        void Create(User entity);
 
-        void UpdateUser(User user);
+        void Update(User entity);
 
-        void DeleteUser(User user);
+        void Delete(User entity);
     }
 }

@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SwapApp.Business.Abstract;
+using SwapApp.Business.Concrete;
+using SwapApp.DataAccess.Abstract;
+using SwapApp.DataAccess.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +27,12 @@ namespace SwapApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //AddSingleton
+            services.AddSingleton<IUserService, UserManager>();
+
+            services.AddSingleton<IUserRepository, UserRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
