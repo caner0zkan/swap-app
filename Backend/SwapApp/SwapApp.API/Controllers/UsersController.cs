@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SwapApp.Business.Abstract;
-using SwapApp.Business.Concrete;
 using SwapApp.Entities;
 using System;
 using System.Collections.Generic;
