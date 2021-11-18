@@ -30,8 +30,18 @@ namespace SwapApp.API
 
             //AddSingleton
             services.AddSingleton<IUserService, UserManager>();
+            services.AddSingleton<IProductStatusService, ProductStatusManager>();
+            services.AddSingleton<IProductService, ProductManager>();
+            services.AddSingleton<IImageService, ImageManager>();
+            services.AddSingleton<ICategoryService, CategoryManager>();
+            services.AddSingleton<IBidService, BidManager>();
 
             services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IProductStatusRepository, ProductStatusRepository>();
+            services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<IImageRepository, ImageRepository>();
+            services.AddSingleton<ICategoryRepository, CategoryRepository>();
+            services.AddSingleton<IBidRepository, BidRepository>();
 
         }
 
