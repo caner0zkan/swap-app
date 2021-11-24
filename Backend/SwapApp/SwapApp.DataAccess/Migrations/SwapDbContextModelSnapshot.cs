@@ -29,10 +29,7 @@ namespace SwapApp.DataAccess.Migrations
                     b.Property<DateTime>("BidDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ProductID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductdID")
+                    b.Property<int>("ProductID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -70,10 +67,7 @@ namespace SwapApp.DataAccess.Migrations
                     b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProductID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductdID")
+                    b.Property<int>("ProductID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -129,7 +123,7 @@ namespace SwapApp.DataAccess.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Auctions");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("SwapApp.Entities.ProductStatus", b =>
@@ -144,7 +138,7 @@ namespace SwapApp.DataAccess.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("AuctionStatuses");
+                    b.ToTable("ProductStatuses");
                 });
 
             modelBuilder.Entity("SwapApp.Entities.User", b =>
@@ -191,7 +185,9 @@ namespace SwapApp.DataAccess.Migrations
                 {
                     b.HasOne("SwapApp.Entities.Product", "Product")
                         .WithMany("Bids")
-                        .HasForeignKey("ProductID");
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
                 });
@@ -200,7 +196,9 @@ namespace SwapApp.DataAccess.Migrations
                 {
                     b.HasOne("SwapApp.Entities.Product", "Product")
                         .WithMany("Images")
-                        .HasForeignKey("ProductID");
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
                 });

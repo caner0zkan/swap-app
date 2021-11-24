@@ -14,11 +14,11 @@ namespace SwapApp.DataAccess
             optionsBuilder.UseSqlServer(@"Server=CANER\SQLEXPRESS; Database=SwapAppDb; uid=sa; pwd=1234;");
         }
 
-        public DbSet<Product> Auctions { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Bid> Bids { get; set; }
-        public DbSet<ProductStatus> AuctionStatuses { get; set; }
+        public DbSet<ProductStatus> ProductStatuses { get; set; }
         public DbSet<Image> Images { get; set; }
     }
 }

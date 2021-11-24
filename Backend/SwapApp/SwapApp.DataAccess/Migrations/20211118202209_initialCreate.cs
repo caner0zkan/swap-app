@@ -8,19 +8,6 @@ namespace SwapApp.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AuctionStatuses",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AuctionStatuses", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Categories",
                 columns: table => new
                 {
@@ -32,6 +19,19 @@ namespace SwapApp.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductStatuses",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductStatuses", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,7 +54,7 @@ namespace SwapApp.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Auctions",
+                name: "Products",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -71,21 +71,21 @@ namespace SwapApp.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Auctions", x => x.ID);
+                    table.PrimaryKey("PK_Products", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Auctions_AuctionStatuses_ProductStatusID",
-                        column: x => x.ProductStatusID,
-                        principalTable: "AuctionStatuses",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Auctions_Categories_CategoryID",
+                        name: "FK_Products_Categories_CategoryID",
                         column: x => x.CategoryID,
                         principalTable: "Categories",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Auctions_Users_UserID",
+                        name: "FK_Products_ProductStatuses_ProductStatusID",
+                        column: x => x.ProductStatusID,
+                        principalTable: "ProductStatuses",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Products_Users_UserID",
                         column: x => x.UserID,
                         principalTable: "Users",
                         principalColumn: "ID",
@@ -99,18 +99,17 @@ namespace SwapApp.DataAccess.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BidDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ProductdID = table.Column<int>(type: "int", nullable: false),
-                    ProductID = table.Column<int>(type: "int", nullable: true)
+                    ProductID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Bids", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Bids_Auctions_ProductID",
+                        name: "FK_Bids_Products_ProductID",
                         column: x => x.ProductID,
-                        principalTable: "Auctions",
+                        principalTable: "Products",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -120,34 +119,18 @@ namespace SwapApp.DataAccess.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Img = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductdID = table.Column<int>(type: "int", nullable: false),
-                    ProductID = table.Column<int>(type: "int", nullable: true)
+                    ProductID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Images", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Images_Auctions_ProductID",
+                        name: "FK_Images_Products_ProductID",
                         column: x => x.ProductID,
-                        principalTable: "Auctions",
+                        principalTable: "Products",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Auctions_CategoryID",
-                table: "Auctions",
-                column: "CategoryID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Auctions_ProductStatusID",
-                table: "Auctions",
-                column: "ProductStatusID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Auctions_UserID",
-                table: "Auctions",
-                column: "UserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Bids_ProductID",
@@ -158,6 +141,21 @@ namespace SwapApp.DataAccess.Migrations
                 name: "IX_Images_ProductID",
                 table: "Images",
                 column: "ProductID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryID",
+                table: "Products",
+                column: "CategoryID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_ProductStatusID",
+                table: "Products",
+                column: "ProductStatusID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_UserID",
+                table: "Products",
+                column: "UserID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -169,13 +167,13 @@ namespace SwapApp.DataAccess.Migrations
                 name: "Images");
 
             migrationBuilder.DropTable(
-                name: "Auctions");
-
-            migrationBuilder.DropTable(
-                name: "AuctionStatuses");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "ProductStatuses");
 
             migrationBuilder.DropTable(
                 name: "Users");

@@ -14,7 +14,7 @@ namespace SwapApp.Entities
 
 
         //Foreign Keys
-        public int ProductdID { get; set; }
+        public int ProductID { get; set; }
         public Product Product { get; set; }
     }
 }
