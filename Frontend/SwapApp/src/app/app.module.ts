@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 const appRoutes: Routes= [
   {path: "", component: HomepageComponent}, //localhost:4200
+  {path: "home", component: HomepageComponent}, //localhost:4200/homepage
+  {path: "signup", component: SignupComponent}, //localhost:4200/signup
 ];
 
 
@@ -18,7 +21,8 @@ const appRoutes: Routes= [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HomepageComponent
+    HomepageComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

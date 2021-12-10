@@ -1,0 +1,17 @@
+.heading{
+  height: 500px;
+  width: 100%;
+  background-color: rgb(168, 242, 255);
+}
+
+.h1{
+  text-align: center;
+  padding-top: 10%;
+  font-size: 50px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.marketing{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
