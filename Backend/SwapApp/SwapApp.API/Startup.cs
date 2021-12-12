@@ -43,6 +43,9 @@ namespace SwapApp.API
             services.AddSingleton<ICategoryRepository, CategoryRepository>();
             services.AddSingleton<IBidRepository, BidRepository>();
 
+            //CORS
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +63,13 @@ namespace SwapApp.API
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            //CORS
+            app.UseCors(options =>
+            options.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+            );
 
             app.UseAuthorization();
 
