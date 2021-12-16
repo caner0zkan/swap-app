@@ -1,1 +1,33 @@
-<p>signup works!</p>
+
+  <div class="container">
+    <h1>Kaydol</h1>
+    <p>Lütfen bilgilerinizi doğru ve eksiksiz bir şekilde giriniz.</p>
+    <hr>
+
+    <label for="username"><b>Kullanıcı Adı</b></label>
+    <input #inputUsername type="text" placeholder="Kullanıcı adınızı giriniz" name="surname" minlength="2" maxlength="20" required>
+
+    <label for="name"><b>Ad</b></label>
+    <input #inputName type="text" placeholder="Adınızı giriniz" name="name" minlength="2" maxlength="20" required>
+
+    <label for="surname"><b>Soyad</b></label>
+    <input #inputSurname type="text" placeholder="Soyadınızı giriniz" name="surname" minlength="2" maxlength="20" required>
+
+    <label for="email"><b>Email</b></label>
+    <input #inputEmail type="text" placeholder="Email adresinizi giriniz" name="email" required>
+
+    <label for="psw"><b>Şifre</b></label>
+    <input #inputPassword type="password" placeholder="Şifrenizi giriniz" name="psw" minlength="6" maxlength="20" required>
+
+    <label for="phone"><b>Telefon Numarası</b></label>
+    <input #inputPhone type="text" placeholder="Telefon numaranızı giriniz" name="phone" minlength="6" maxlength="20" required>
+
+    <label for="adress"><b>Adres</b></label>
+    <input #inputAdress type="adress" placeholder="Adresinizi giriniz" name="adress" minlength="6" maxlength="50" required>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" (click)="createPost(inputName,inputSurname,inputEmail,inputPassword)">Kaydol</button>
+    </div>
+  </div>
+
+

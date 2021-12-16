@@ -1,1 +1,15 @@
-<p>login works!</p>
+<div class="container">
+  <h1>Giriş Yap</h1>
+  <p>Lütfen bilgilerinizi doğru ve eksiksiz bir şekilde giriniz.</p>
+  <hr>
+
+  <label for="username"><b>Kullanıcı Adı</b></label>
+  <input #inputUsername type="text" placeholder="Kullanıcı adınızı giriniz" name="surname" minlength="2" maxlength="20" required>
+
+  <label for="psw"><b>Şifre</b></label>
+  <input #inputPassword type="password" placeholder="Şifrenizi giriniz" name="psw" minlength="6" maxlength="20" required>
+
+  <div class="clearfix">
+    <button type="submit" class="signupbtn" >Giriş Yap</button>
+  </div>
+</div>
