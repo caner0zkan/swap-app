@@ -13,7 +13,8 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createPost(inputName:HTMLInputElement,inputSurname:HTMLInputElement,inputEmail:HTMLInputElement,inputPassword:HTMLInputElement){
+  createPost(inputUsername:HTMLInputElement,inputName:HTMLInputElement,inputSurname:HTMLInputElement,
+    inputEmail:HTMLInputElement,inputPassword:HTMLInputElement,inputPhone:HTMLInputElement,inputAdress:HTMLInputElement){
     const post = {
       name : inputName.value,
       surname : inputSurname.value,

@@ -1,1 +1,39 @@
-<p>newproduct works!</p>
+<div class="container">
+  <button class="btn btn-warning w-auto" routerLink=".." style="color: white;">Geri</button>
+</div>
+
+
+  <div class="container">
+    <h1>Yeni Ürün Ekle</h1>
+    <p>Lütfen alanları uygun şekilde doldurunuz.</p>
+
+    <label for="title"><b>Başlık</b></label>
+    <input #inputTitle type="text" placeholder="Başlığınızı giriniz" name="title" maxlength="40" required>
+
+    <label for="description"><b>Açıklama</b></label>
+    <input #inputDescription type="text" placeholder="Açıklamanızı yazınız" name="description" maxlength="500" required>
+
+    <!-- <label for="image"><b>Resim</b></label>
+    <input #inputImage type="file" placeholder="Resim seçiniz" name="image" required> -->
+
+    <label for="price"><b>Fiyat</b></label>
+    <input #inputPrice type="number" placeholder="Lütfen ürünün ortalama fiyatını yazınız" name="price" required>
+
+    <label for="keywords"><b>Anahtar Kelimeler</b></label>
+    <input #inputKeywords type="text" placeholder="Lütfen anahtar kelimeleri araya virgül koyarak giriniz" name="keywords" required>
+
+    <label for="category"><b>Kategori</b></label>
+    <select (change)="selectChangeHandler($event)" class="choose" required>
+      <option value="" disabled selected hidden>Lütfen kategoriyi seçiniz</option>
+      <option value=1>Araba</option>
+      <option value=2>Elektronik</option>
+      <option value=3>Giyim</option>
+      <option value=4>Kitap</option>
+      <option value=5>Ev Eşyası</option>
+    </select>
+
+    <div class="clearfix">
+      <button type="submit" class="button signupbtn" (click)="createPost(inputTitle,inputDescription,inputPrice,inputKeywords)">Yeni Ürün Ekle</button>
+    </div>
+  </div>
+
