@@ -16,14 +16,17 @@ export class SignupComponent implements OnInit {
   createPost(inputUsername:HTMLInputElement,inputName:HTMLInputElement,inputSurname:HTMLInputElement,
     inputEmail:HTMLInputElement,inputPassword:HTMLInputElement,inputPhone:HTMLInputElement,inputAdress:HTMLInputElement){
     const post = {
+      username: inputUsername.value,
       name : inputName.value,
       surname : inputSurname.value,
       email : inputEmail.value,
-      password : inputPassword.value
+      password : inputPassword.value,
+      phone: inputPhone.value,
+      adress: inputAdress.value
     }
     console.log(post);
 
-    this.http.post("http://localhost:58426/api/users",post)
+    this.http.post("http://localhost:18697/api/users",post)
       .subscribe(response => {
         console.log(response);
       })
