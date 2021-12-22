@@ -16,29 +16,30 @@ export class NewproductComponent implements OnInit {
 
 
   selectedCategory=1;
-  x=0;
+  a=0;
   selectChangeHandler(event:any){
     this.selectedCategory = event.target.value;
-    this.x = +this.selectedCategory;
+    this.a = +this.selectedCategory;
   }
 
-  createPost(inputTitle:HTMLInputElement,inputDescription:HTMLInputElement,inputPrice:HTMLInputElement,inputKeywords:HTMLInputElement){
-      let y=0;
-      y = +inputPrice.value;
+  createPost(inputTitle:HTMLInputElement,inputDescription:HTMLInputElement,inputPrice:HTMLInputElement,inputKeywords:HTMLInputElement,inputDate:HTMLInputElement){
+      let b=0;
+      b = +inputPrice.value;
 
     const post = {
       Title: inputTitle.value,
-      Comment: inputDescription.value,
-      StartingPrice: y,
-      Winner:1,
-      Date: null,
-      AdminID:1,
-      CategoryID: this.x,
-      AuctionStatusID: 1
+      Description: inputDescription.value,
+      Image: "Image.jpg",
+      Price: b,
+      Keywords: inputKeywords.value,
+      Date: inputDate.value,
+      UserID: 1,
+      CategoryID: 1,
+      ProductStatusID: 1
     }
     console.log(post);
 
-    this.http.post("http://localhost:58426/api/auctions",post)
+    this.http.post("http://localhost:18697/api/products",post)
       .subscribe(response => {
         console.log(response);
       })

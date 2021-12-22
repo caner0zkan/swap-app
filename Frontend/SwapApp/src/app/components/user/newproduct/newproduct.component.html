@@ -22,6 +22,9 @@
     <label for="keywords"><b>Anahtar Kelimeler</b></label>
     <input #inputKeywords type="text" placeholder="Lütfen anahtar kelimeleri araya virgül koyarak giriniz" name="keywords" required>
 
+    <label for="date"><b>Date</b></label>
+    <input #inputDate type="date" placeholder="Tarihi giriniz" name="date" required>
+
     <label for="category"><b>Kategori</b></label>
     <select (change)="selectChangeHandler($event)" class="choose" required>
       <option value="" disabled selected hidden>Lütfen kategoriyi seçiniz</option>
@@ -33,7 +36,7 @@
     </select>
 
     <div class="clearfix">
-      <button type="submit" class="button signupbtn" (click)="createPost(inputTitle,inputDescription,inputPrice,inputKeywords)">Yeni Ürün Ekle</button>
+      <button type="submit" class="button signupbtn" (click)="createPost(inputTitle,inputDescription,inputPrice,inputKeywords,inputDate)">Yeni Ürün Ekle</button>
     </div>
   </div>
 
