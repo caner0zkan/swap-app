@@ -1,11 +1,13 @@
 <div class="row">
 
   <div class="category col-md-3">
-    <div class="list-group mt-5">
-      <a href="#" class="list-group-item list-group-item-action">Category 1</a>
-      <a href="#" class="list-group-item list-group-item-action">Category 2</a>
-      <a href="#" class="list-group-item list-group-item-action">Category 3</a>
-      <a href="#" class="list-group-item list-group-item-action">Category 4</a>
+    <div class="vertical-menu mt-5">
+      <a href="#">Kategori 1</a>
+      <a href="#">Kategori 2</a>
+      <a href="#">Kategori 3</a>
+      <a href="#">Kategori 4</a>
+      <a href="#">Kategori 5</a>
+      <a href="#">Kategori 6</a>
     </div>
   </div>
 
@@ -17,7 +19,7 @@
         <h1>{{item.title}}</h1>
         <p class="price">{{item.price}} TL</p>
         <p>{{item.description}}</p>
-        <p><button>Detay</button></p>
+        <p><button [routerLink]="['/product',item.id]" (click)="detailItem(item)">Detay</button></p>
       </div>
     </div>
   </div>

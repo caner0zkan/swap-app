@@ -15,6 +15,7 @@ import { UserComponent } from './components/user/user.component';
 import { NewproductComponent } from './components/user/newproduct/newproduct.component';
 import { StatusproductComponent } from './components/user/statusproduct/statusproduct.component';
 import { UpdateproductComponent } from './components/user/updateproduct/updateproduct.component';
+import { ProductComponent } from './components/product/product.component';
 
 
 const appRoutes: Routes= [
@@ -23,6 +24,7 @@ const appRoutes: Routes= [
   {path: "signup", component: SignupComponent}, //localhost:4200/signup
   {path: "login", component: LoginComponent}, //localhost:4200/login
   {path: "products", component: ProductsComponent}, //localhost:4200/products
+  {path: "product/:id", component: ProductComponent}, //localhost:4200/product/id
   {path: "user/:id", component: UserComponent}, //localhost:4200/user/id
   {path: "user/:id/newproduct", component: NewproductComponent}, //localhost:4200/user/newproduct
   {path: "user/:id/statusproduct", component: StatusproductComponent}, //localhost:4200/user/statusproduct
@@ -45,7 +47,8 @@ const appRoutes: Routes= [
     UserComponent,
     NewproductComponent,
     StatusproductComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
