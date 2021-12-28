@@ -13,10 +13,10 @@
     <label for="description"><b>Açıklama</b></label>
     <input #inputDescription type="text" placeholder="Açıklamanızı yazınız" name="description" maxlength="500" required>
 
-    <!-- <label for="image"><b>Resim</b></label>
-    <input #inputImage type="file" placeholder="Resim seçiniz" name="image" required> -->
+    <label for="image" style="display: block;"><b>Resim</b></label>
+    <input #inputImage type="file" style="display: block;" placeholder="Resim seçiniz" name="image" (change)="onFileSelected($event)" required>
 
-    <label for="price"><b>Fiyat</b></label>
+    <label for="price" style="margin-top: 20px;"><b>Fiyat</b></label>
     <input #inputPrice type="number" placeholder="Lütfen ürünün ortalama fiyatını yazınız" name="price" required>
 
     <label for="keywords"><b>Anahtar Kelimeler</b></label>

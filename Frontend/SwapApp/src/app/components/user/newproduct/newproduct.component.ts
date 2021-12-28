@@ -17,9 +17,17 @@ export class NewproductComponent implements OnInit {
 
   selectedCategory=1;
   a=0;
+  img="../../../assets/img/";
   selectChangeHandler(event:any){
     this.selectedCategory = event.target.value;
     this.a = +this.selectedCategory;
+  }
+
+  onFileSelected(event:any) {
+    if(event.target.files.length > 0)
+    {
+      this.img+=event.target.files[0].name;
+    }
   }
 
   createPost(inputTitle:HTMLInputElement,inputDescription:HTMLInputElement,inputPrice:HTMLInputElement,inputKeywords:HTMLInputElement,inputDate:HTMLInputElement){
@@ -29,7 +37,7 @@ export class NewproductComponent implements OnInit {
     const post = {
       Title: inputTitle.value,
       Description: inputDescription.value,
-      Image: "Image.jpg",
+      Image: this.img,
       Price: b,
       Keywords: inputKeywords.value,
       Date: inputDate.value,

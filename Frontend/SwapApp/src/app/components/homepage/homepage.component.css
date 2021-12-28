@@ -6,9 +6,12 @@
 
 .h1{
   text-align: center;
-  padding-top: 10%;
   font-size: 50px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.head{
+  padding-top: 8%;
 }
 
 .marketing{
