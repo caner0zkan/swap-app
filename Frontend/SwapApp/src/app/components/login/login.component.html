@@ -4,12 +4,12 @@
   <hr>
 
   <label for="username"><b>Kullanıcı Adı</b></label>
-  <input #inputUsername type="text" placeholder="Kullanıcı adınızı giriniz" name="surname" minlength="2" maxlength="20" required>
+  <input #inputUsername type="text" placeholder="Kullanıcı adınızı giriniz" name="username" minlength="2" maxlength="20" required>
 
   <label for="psw"><b>Şifre</b></label>
-  <input #inputPassword type="password" placeholder="Şifrenizi giriniz" name="psw" minlength="6" maxlength="20" required>
+  <input #inputPassword type="password" placeholder="Şifrenizi giriniz" name="psw" minlength="2" maxlength="20" required>
 
   <div class="clearfix">
-    <button type="submit" class="signupbtn" >Giriş Yap</button>
+    <button type="submit" class="signupbtn" (click)="createPost(inputUsername,inputPassword)" >Giriş Yap</button>
   </div>
 </div>
