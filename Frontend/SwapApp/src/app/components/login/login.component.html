@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
   <h1>Giriş Yap</h1>
   <p>Lütfen bilgilerinizi doğru ve eksiksiz bir şekilde giriniz.</p>
   <hr>
@@ -9,7 +9,9 @@
   <label for="psw"><b>Şifre</b></label>
   <input #inputPassword type="password" placeholder="Şifrenizi giriniz" name="psw" minlength="2" maxlength="20" required>
 
+  <p style="color: red;">{{this.error}}</p>
+
   <div class="clearfix">
-    <button type="submit" class="signupbtn" (click)="createPost(inputUsername,inputPassword)" >Giriş Yap</button>
+    <button type="submit" class="signupbtn" (click)="createPost(inputUsername,inputPassword)">Giriş Yap</button>
   </div>
 </div>
