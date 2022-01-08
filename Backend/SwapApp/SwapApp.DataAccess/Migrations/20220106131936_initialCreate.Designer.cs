@@ -10,7 +10,7 @@ using SwapApp.DataAccess;
 namespace SwapApp.DataAccess.Migrations
 {
     [DbContext(typeof(SwapDbContext))]
-    [Migration("20211118202209_initialCreate")]
+    [Migration("20220106131936_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,8 +97,8 @@ namespace SwapApp.DataAccess.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Image")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("Keywords")
                         .HasMaxLength(50)
@@ -157,6 +157,10 @@ namespace SwapApp.DataAccess.Migrations
                     b.Property<string>("Email")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Image")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(30)

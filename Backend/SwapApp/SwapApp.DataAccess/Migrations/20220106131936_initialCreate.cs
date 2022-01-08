@@ -44,6 +44,7 @@ namespace SwapApp.DataAccess.Migrations
                     Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     Surname = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     Password = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
                     Adress = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
@@ -61,7 +62,7 @@ namespace SwapApp.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    Image = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     Price = table.Column<int>(type: "int", nullable: false),
                     Keywords = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),

@@ -14,10 +14,11 @@ export class NewproductComponent implements OnInit {
   }
 
 
-
   selectedCategory=1;
   a=0;
-  img="../../../assets/img/";
+  img="../../../assets/img/product/";
+
+
   selectChangeHandler(event:any){
     this.selectedCategory = event.target.value;
     this.a = +this.selectedCategory;
@@ -41,7 +42,7 @@ export class NewproductComponent implements OnInit {
       Price: b,
       Keywords: inputKeywords.value,
       Date: inputDate.value,
-      UserID: 1,
+      UserID: 2,
       CategoryID: 1,
       ProductStatusID: 1
     }

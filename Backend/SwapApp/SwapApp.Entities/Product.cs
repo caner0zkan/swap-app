@@ -14,7 +14,7 @@ namespace SwapApp.Entities
         public string Title { get; set; }
         [StringLength(500)]
         public string Description { get; set; }
-        [StringLength(50)]
+        [StringLength(150)]
         public string Image { get; set; }
         public int Price { get; set; }
         [StringLength(50)]

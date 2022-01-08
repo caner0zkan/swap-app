@@ -16,6 +16,9 @@
     <label for="email"><b>Email</b></label>
     <input #inputEmail type="text" placeholder="Email adresinizi giriniz" name="email" maxlength="30" required>
 
+    <label for="image" style="display: block;"><b>Resim</b></label>
+    <input class="mb-3" #inputImage type="file" style="display: block;" placeholder="Resim seçiniz" name="image" (change)="onFileSelected($event)" required>
+
     <label for="password"><b>Şifre</b></label>
     <input #inputPassword type="password" placeholder="Şifrenizi giriniz" name="password" minlength="6" maxlength="30" required>
 

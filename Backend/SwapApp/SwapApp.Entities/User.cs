@@ -17,6 +17,8 @@ namespace SwapApp.Entities
         public string Surname { get; set; }
         [StringLength(30)]
         public string Email { get; set; }
+        [StringLength(150)]
+        public string Image { get; set; }
         [StringLength(30)]
         public string Password { get; set; }
         [StringLength(15)]

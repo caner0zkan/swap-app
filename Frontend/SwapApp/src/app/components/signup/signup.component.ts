@@ -13,6 +13,18 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  img="../../../assets/img/user/";
+
+
+  onFileSelected(event:any) {
+    if(event.target.files.length > 0)
+    {
+      this.img+=event.target.files[0].name;
+    }
+  }
+
+
   createPost(inputUsername:HTMLInputElement,inputName:HTMLInputElement,inputSurname:HTMLInputElement,
     inputEmail:HTMLInputElement,inputPassword:HTMLInputElement,inputPhone:HTMLInputElement,inputAdress:HTMLInputElement){
     const post = {
@@ -20,6 +32,7 @@ export class SignupComponent implements OnInit {
       name : inputName.value,
       surname : inputSurname.value,
       email : inputEmail.value,
+      Image: this.img,
       password : inputPassword.value,
       phone: inputPhone.value,
       adress: inputAdress.value
