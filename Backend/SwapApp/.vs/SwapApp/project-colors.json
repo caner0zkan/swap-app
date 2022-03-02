@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "809a9afb-60ca-4174-ba6b-80b9a749aa22": {
+      "ProjectGuid": "809a9afb-60ca-4174-ba6b-80b9a749aa22",
+      "DisplayName": "SwapApp.DataAccess",
+      "ColorIndex": 0
+    },
+    "506d497c-1efb-4ec5-ba53-baf5c0234b9a": {
+      "ProjectGuid": "506d497c-1efb-4ec5-ba53-baf5c0234b9a",
+      "DisplayName": "SwapApp.API",
+      "ColorIndex": 1
+    },
+    "11cd4d8b-25e0-481e-b290-5903b2d1bd6d": {
+      "ProjectGuid": "11cd4d8b-25e0-481e-b290-5903b2d1bd6d",
+      "DisplayName": "SwapApp.Business",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

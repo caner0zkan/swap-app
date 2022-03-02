@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = SwapApp.DataAccess
+build_property.ProjectDir = C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\
