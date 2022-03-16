@@ -12,3 +12,4 @@ C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netco
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.csproj.CopyComplete
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.dll
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.pdb
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.Business\obj\Debug\netcoreapp3.1\SwapApp.Business.GeneratedMSBuildEditorConfig.editorconfig

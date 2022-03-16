@@ -62,8 +62,6 @@ C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.RazorAssemblyInfo.cache
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.RazorAssemblyInfo.cs
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\staticwebassets\SwapApp.API.StaticWebAssets.Manifest.cache
-C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\staticwebassets\SwapApp.API.StaticWebAssets.xml
-C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\SwapApp.API.styles.css
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.TagHelpers.input.cache
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.TagHelpers.output.cache
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.RazorCoreGenerate.cache
@@ -81,3 +79,7 @@ C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.dll
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.pdb
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.genruntimeconfig.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\obj\Debug\netcoreapp3.1\SwapApp.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

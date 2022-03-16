@@ -1,4 +1,5 @@
 <div class="container mt-5">
+
   <h1>Profil</h1>
 
   <div class="left-column mb-3 mt-3">
@@ -17,4 +18,14 @@
     <button type="submit" class="btn btn-success" routerLink="newproduct">Yeni Ürün</button>
     <!--<button type="submit" class="btn btn-success" routerLink="statusproduct" style="margin-left: 10px;">Ürünlerimin Durumu</button>-->
   </div>
+
+  <ul class="list-group mt-5" style="max-width: 600px;">
+    <h3>Ürünlerim</h3>
+    <b><li *ngFor="let item of items.products; let i = index" class="list-group-item" style="height: 50px;">{{items.products[i].title}}
+      <button (click)="deleteItem(items.products[i].id)" type="submit" class="btn btn-danger" style="right: 10px; position: absolute;">Sil</button>
+    </li></b>
+  </ul>
+
 </div>
+
+

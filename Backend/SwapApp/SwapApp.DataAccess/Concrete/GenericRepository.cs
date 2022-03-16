@@ -20,6 +20,8 @@ namespace SwapApp.DataAccess.Concrete
             }
         }
 
+
+
         public void Delete(T entity)
         {
             using (var context = new TContext())
@@ -29,7 +31,7 @@ namespace SwapApp.DataAccess.Concrete
             }
         }
 
-        public List<T> GetAll()
+        public virtual List<T> GetAll()
         {
             using (var context = new TContext())
             {
@@ -37,7 +39,7 @@ namespace SwapApp.DataAccess.Concrete
             }
         }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
             using (var context = new TContext())
             {

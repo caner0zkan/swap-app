@@ -13,3 +13,4 @@ C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\net
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.dll
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.pdb
 C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.genruntimeconfig.cache
+C:\App Projects\GitHub\swap-app\Backend\SwapApp\SwapApp.DataAccess\obj\Debug\netcoreapp3.1\SwapApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig

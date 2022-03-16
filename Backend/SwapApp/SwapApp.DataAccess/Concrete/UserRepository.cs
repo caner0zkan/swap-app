@@ -10,5 +10,22 @@ namespace SwapApp.DataAccess.Concrete
 {
     public class UserRepository : GenericRepository<User, SwapDbContext>, IUserRepository
     {
+
+        public override List<User> GetAll()
+        {
+            using (var context = new SwapDbContext())
+            {
+                return context.Set<User>().Include(x => x.Products).ToList();
+            }
+        }
+
+        public override User GetById(int id)
+        {
+            using (var context = new SwapDbContext())
+            {
+                User user = context.Set<User>().Include(x=>x.Products).FirstOrDefault(x=>x.ID ==id);
+                return user;
+            }
+        }
     }
 }

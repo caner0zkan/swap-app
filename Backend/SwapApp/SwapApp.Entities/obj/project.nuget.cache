@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "6sBpQBokikpLdkK6N5Eq30E7lLe0a+rXbp2X3Fc3jR5zHyE35gtv+/ozc6SzOxQhA4rkMQTcMF0MFL0xNjpacw==",
+  "dgSpecHash": "1vC6GgoMXPdKihFRWJWrGhdZGL3hpKRNJQPXZ81wmVxZ9ljLaZucPajXe5Bkuy0st1fmgquTNA3ilI0Glm6UsA==",
   "success": true,
   "projectFilePath": "C:\\App Projects\\GitHub\\swap-app\\Backend\\SwapApp\\SwapApp.Entities\\SwapApp.Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\caner\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.23\\microsoft.aspnetcore.jsonpatch.3.1.23.nupkg.sha512",
+    "C:\\Users\\caner\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.23\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.23.nupkg.sha512",
+    "C:\\Users\\caner\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\caner\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\caner\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
