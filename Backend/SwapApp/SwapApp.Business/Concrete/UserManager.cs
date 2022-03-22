@@ -23,9 +23,9 @@ namespace SwapApp.Business.Concrete
             _userRepository.Create(entity);
         }
 
-        public void Delete(User entity)
+        public void Delete(int id)
         {
-            _userRepository.Delete(entity);
+            _userRepository.Delete(id);
         }
 
         public List<User> GetAll()

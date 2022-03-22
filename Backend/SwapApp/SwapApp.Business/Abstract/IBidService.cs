@@ -15,6 +15,6 @@ namespace SwapApp.Business.Abstract
 
         void Update(Bid entity);
 
-        void Delete(Bid entity);
+        void Delete(int id);
     }
 }

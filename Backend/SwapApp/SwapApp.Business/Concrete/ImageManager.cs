@@ -21,9 +21,9 @@ namespace SwapApp.Business.Concrete
             _imageRepository.Create(entity);
         }
 
-        public void Delete(Image entity)
+        public void Delete(int id)
         {
-            _imageRepository.Delete(entity);
+            _imageRepository.Delete(id);
         }
 
         public List<Image> GetAll()

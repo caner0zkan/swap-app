@@ -21,9 +21,9 @@ namespace SwapApp.Business.Concrete
             _categoryRepository.Create(entity);
         }
 
-        public void Delete(Category entity)
+        public void Delete(int id)
         {
-            _categoryRepository.Delete(entity);
+            _categoryRepository.Delete(id);
         }
 
         public List<Category> GetAll()

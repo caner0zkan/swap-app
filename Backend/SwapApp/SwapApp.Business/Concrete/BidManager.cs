@@ -21,9 +21,9 @@ namespace SwapApp.Business.Concrete
             _bidRepository.Create(entity);
         }
 
-        public void Delete(Bid entity)
+        public void Delete(int id)
         {
-            _bidRepository.Delete(entity);
+            _bidRepository.Delete(id);
         }
 
         public List<Bid> GetAll()

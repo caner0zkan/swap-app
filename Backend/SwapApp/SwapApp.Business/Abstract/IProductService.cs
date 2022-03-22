@@ -15,6 +15,6 @@ namespace SwapApp.Business.Abstract
 
         void Update(Product entity);
 
-        void Delete(Product entity);
+        void Delete(int id);
     }
 }

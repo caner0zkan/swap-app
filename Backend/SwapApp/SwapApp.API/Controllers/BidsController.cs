@@ -45,9 +45,9 @@ namespace SwapApp.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(Bid user)
+        public void Delete(int id)
         {
-            _bidService.Delete(user);
+            _bidService.Delete(id);
         }
     }
 }

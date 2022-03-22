@@ -22,9 +22,9 @@ namespace SwapApp.Business.Concrete
             _productRepository.Create(entity);
         }
 
-        public void Delete(Product entity)
+        public void Delete(int id)
         {
-            _productRepository.Delete(entity);
+            _productRepository.Delete(id);
         }
 
         public List<Product> GetAll()

@@ -45,9 +45,9 @@ namespace SwapApp.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(Image user)
+        public void Delete(int id)
         {
-            _imageService.Delete(user);
+            _imageService.Delete(id);
         }
     }
 }

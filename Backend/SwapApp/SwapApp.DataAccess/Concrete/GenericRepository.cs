@@ -22,12 +22,11 @@ namespace SwapApp.DataAccess.Concrete
 
 
 
-        public void Delete(T entity)
+        public virtual void Delete(int id)
         {
             using (var context = new TContext())
             {
-                context.Set<T>().Remove(entity);
-                context.SaveChanges();
+
             }
         }
 
