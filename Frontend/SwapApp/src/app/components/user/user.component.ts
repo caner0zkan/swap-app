@@ -25,7 +25,11 @@ export class UserComponent implements OnInit {
   }
 
   deleteItem(id:number){
-    this.http.delete("http://localhost:18697/api/products"+id)
+    this.http.delete("http://localhost:18697/api/products/"+id)
+      .subscribe(response => {
+        console.log(response);
+    })
+    window.location.reload();
   }
 
 }
