@@ -20,5 +20,6 @@ namespace SwapApp.DataAccess
         public DbSet<Bid> Bids { get; set; }
         public DbSet<ProductStatus> ProductStatuses { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

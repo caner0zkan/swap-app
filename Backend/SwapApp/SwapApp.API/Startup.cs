@@ -35,6 +35,7 @@ namespace SwapApp.API
             services.AddSingleton<IImageService, ImageManager>();
             services.AddSingleton<ICategoryService, CategoryManager>();
             services.AddSingleton<IBidService, BidManager>();
+            services.AddSingleton<ICommentService, CommentManager>();
 
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IProductStatusRepository, ProductStatusRepository>();
@@ -42,6 +43,7 @@ namespace SwapApp.API
             services.AddSingleton<IImageRepository, ImageRepository>();
             services.AddSingleton<ICategoryRepository, CategoryRepository>();
             services.AddSingleton<IBidRepository, BidRepository>();
+            services.AddSingleton<ICommentRepository, CommentRepository>();
 
             //CORS
             services.AddCors();
