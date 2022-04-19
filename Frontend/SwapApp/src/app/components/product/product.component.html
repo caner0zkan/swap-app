@@ -33,7 +33,7 @@
           <div class="d-flex flex-column comment-section">
               <div *ngFor="let item of items.comments; let i = index" class="bg-white p-2">
                   <div class="d-flex flex-row user-info"><img src="../../../assets/img/img1.png" width="40" style="margin-right: 10px;">
-                      <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">Caner Özkan</span><span class="date text-black-50">Haz 2021</span></div>
+                      <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">{{items.comments[i].name}}</span><span class="date text-black-50">{{items.comments[i].date}}</span></div>
                   </div>
                   <div class="mt-2">
                       <p class="comment-text">{{items.comments[i].text}}</p>
@@ -42,8 +42,8 @@
               </div>
 
               <div class="bg-light p-2 mt-5">
-                  <div class="d-flex flex-row align-items-start"><img src="../../../assets/img/img1.png" width="40" style="margin-right: 10px;"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
-                  <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none" type="button" style="margin-left: 50px;">Yorum Yap</button></div>
+                  <div class="d-flex flex-row align-items-start"><img src="../../../assets/img/img1.png" width="40" style="margin-right: 10px;"><input #inputComment type="text" placeholder="Yorumunuzu yazınız" name="name" class="form-control ml-1 shadow-none textarea"></div>
+                  <div class="mt-2 text-right"><button (click)="createComment(inputComment)" class="btn btn-primary btn-sm shadow-none" type="button" style="margin-left: 50px;">Yorum Yap</button></div>
               </div>
           </div>
       </div>

@@ -1,1 +1,36 @@
-<p>updateproduct works!</p>
+<div class="container">
+  <button class="btn btn-warning w-auto" routerLink="../.." style="color: white;">Geri</button>
+</div>
+
+
+  <div class="container">
+    <h1>Ürünü Düzenle</h1>
+    <p>Lütfen alanları uygun şekilde doldurunuz.</p>
+
+    <label for="title"><b>Başlık</b></label>
+    <input #inputTitle type="text" placeholder="Başlığınızı giriniz" name="title" maxlength="40" required value={{items.title}}>
+
+    <label for="description"><b>Açıklama</b></label>
+    <input #inputDescription type="text" placeholder="Açıklamanızı yazınız" name="description" maxlength="500" required value={{items.description}}>
+
+    <label for="image" style="display: block;"><b>Resim</b></label>
+    <input #inputImage type="file" style="display: block;" placeholder="Resim seçiniz" name="image" (change)="onFileSelected($event)" required>
+
+    <label for="price" style="margin-top: 20px;"><b>Fiyat</b></label>
+    <input #inputPrice type="number" placeholder="Lütfen ürünün ortalama fiyatını yazınız" name="price" required value={{items.price}}>
+
+    <label for="category"><b>Kategori</b></label>
+    <select (change)="selectChangeHandler($event)" class="choose" required>
+      <option value="" disabled selected hidden>Lütfen kategoriyi seçiniz</option>
+      <option value=1>bisiklet/scooter</option>
+      <option value=2>elektronik</option>
+      <option value=3>giyim</option>
+      <option value=4>kitap</option>
+      <option value=5>ev eşyası</option>
+    </select>
+
+    <div class="clearfix">
+      <button type="submit" class="button signupbtn" (click)="updatePost(inputTitle,inputDescription,inputPrice)" routerLink="../..">Düzenlemeyi Kayet</button>
+    </div>
+  </div>
+

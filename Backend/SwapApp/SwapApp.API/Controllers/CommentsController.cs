@@ -35,7 +35,11 @@ namespace SwapApp.API.Controllers
         [HttpPost]
         public void Post([FromBody] Comment user)
         {
-            _commentService.Create(user);
+            var login = new LoginController();
+
+            var sessionName = login.LoginName();
+            var sessionId = login.LoginId();
+            _commentService.Create(user, sessionId, sessionName);
         }
 
         [HttpPut]

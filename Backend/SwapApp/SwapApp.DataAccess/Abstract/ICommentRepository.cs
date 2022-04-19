@@ -5,7 +5,8 @@ using System.Text;
 
 namespace SwapApp.DataAccess.Abstract
 {
-    public interface ICommentRepository: IRepository<Comment>
+    public interface ICommentRepository : IRepository<Comment>
     {
+        void Create(Comment entity, int? sessiınId, string sessionName);
     }
 }

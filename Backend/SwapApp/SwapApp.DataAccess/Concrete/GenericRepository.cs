@@ -11,7 +11,7 @@ namespace SwapApp.DataAccess.Concrete
         where T : class
         where TContext : SwapDbContext, new()
     {
-        public void Create(T entity)
+        public virtual void Create(T entity)
         {
             using (var context = new TContext())
             {

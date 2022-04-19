@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SwapApp.DataAccess;
 using SwapApp.Entities;
@@ -23,17 +24,32 @@ namespace SwapApp.API.Controllers
         }
 
         [HttpPost]
+        [EnableCors]
         public IActionResult Post([FromBody] User user)
         {
             var login = context.Users.FirstOrDefault(x => x.Username == user.Username && x.Password == user.Password);
             if(login != null)
             {
+                HttpContext.Session.SetString("name", login.Name);
+                HttpContext.Session.SetInt32("id", login.ID);
                 return CreatedAtAction("Get", new { id = login.ID }, login);
             }
             else
             {
                 return BadRequest("Girdiğiniz bilgiler uyuşmamaktadır. Lütfen tekrar deneyiniz.");
             }
+        }
+
+        public int LoginId()
+        {
+            var sessionId = HttpContext.Session.GetInt32("id");
+            return (int)sessionId;
+        }
+
+        public string LoginName()
+        {
+            string sessionName = HttpContext.Session.GetString("name");
+            return sessionName;
         }
 
     }

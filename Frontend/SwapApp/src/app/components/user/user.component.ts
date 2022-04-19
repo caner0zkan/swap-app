@@ -32,4 +32,8 @@ export class UserComponent implements OnInit {
     window.location.reload();
   }
 
+  public updateItem(id:number){
+    return id;
+  }
+
 }

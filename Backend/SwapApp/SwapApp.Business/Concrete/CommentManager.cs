@@ -16,9 +16,9 @@ namespace SwapApp.Business.Concrete
             _commentRepository = commentRepository;
         }
 
-        public void Create(Comment entity)
+        public void Create(Comment entity,int? sessionId, string sessionName)
         {
-            _commentRepository.Create(entity);
+            _commentRepository.Create(entity,sessionId,sessionName);
         }
 
         public void Delete(int id)

@@ -10,6 +10,7 @@ namespace SwapApp.Entities
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+        public string Name { get; set; }
         [StringLength(200)]
         public string Text { get; set; }
         public DateTime Date { get; set; }

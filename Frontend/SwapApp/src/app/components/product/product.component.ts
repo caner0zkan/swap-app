@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -24,5 +25,23 @@ export class ProductComponent implements OnInit {
       })
     });
   }
+
+  createComment(inputComment:HTMLInputElement){
+    const post = {
+      name: null,
+      text: inputComment.value,
+      date: "2022-05-05",
+      userID: 2,
+      productID: Number(this.param)
+    }
+    console.log(post);
+
+    this.http.post("http://localhost:18697/api/comments",post)
+    .subscribe(response => {
+      console.log(response);
+    })
+
+  }
+
 
 }

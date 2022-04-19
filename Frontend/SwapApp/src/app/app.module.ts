@@ -28,7 +28,7 @@ const appRoutes: Routes= [
   {path: "user/:id", component: UserComponent}, //localhost:4200/user/id
   {path: "user/:id/newproduct", component: NewproductComponent}, //localhost:4200/user/newproduct
   {path: "user/:id/statusproduct", component: StatusproductComponent}, //localhost:4200/user/statusproduct
-  {path: "user/:id/updateproduct", component: UpdateproductComponent}, //localhost:4200/user/updateproduct
+  {path: "user/:id/updateproduct/:id", component: UpdateproductComponent}, //localhost:4200/user/updateproduct
 
   {path: "**", component: NotfoundComponent} //notfound page
 ];

@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       })
 
       if(this.items == null){
-        this.error = "Girdiğiniz bilgiler hatalıdır. Lütfen kontrol edip, tekrar deneyiniz.";
+        this.error = "";
       }
 
   }

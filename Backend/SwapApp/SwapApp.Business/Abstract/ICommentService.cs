@@ -11,7 +11,7 @@ namespace SwapApp.Business.Abstract
 
         Comment GetById(int id);
 
-        void Create(Comment entity);
+        void Create(Comment entity,int? sessionId,string sessionString);
 
         void Update(Comment entity);
 

@@ -26,6 +26,11 @@ namespace SwapApp.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Session
+            services.AddMvc()
+                .AddSessionStateTempDataProvider();
+            services.AddSession();
+
             services.AddControllers();
 
             //AddSingleton
@@ -79,6 +84,9 @@ namespace SwapApp.API
             );
 
             app.UseAuthorization();
+
+            //Session
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
