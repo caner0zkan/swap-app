@@ -36,7 +36,8 @@ namespace SwapApp.API.Controllers
         public void Post([FromBody] Comment user)
         {
             var login = new LoginController();
-
+            //var sessionName = HttpContext.Session.GetString("name");
+            //var sessionId = HttpContext.Session.GetInt32("id");
             var sessionName = login.LoginName();
             var sessionId = login.LoginId();
             _commentService.Create(user, sessionId, sessionName);

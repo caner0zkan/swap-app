@@ -15,6 +15,7 @@ namespace SwapApp.DataAccess.Concrete
                 entity.Name = sessionName;
                 int id = (int)sessionId;
                 entity.UserID = id;
+
                 context.Set<Comment>().Add(entity);
                 context.SaveChanges();
             }

@@ -24,6 +24,7 @@ namespace SwapApp.Entities
         public List<Image> Images { get; set; }
         public List<Bid> Bids { get; set; }
         public List<Comment> Comments { get; set; }
+        public List<Product> Offers { get; set; }
 
 
         //Foreign Keys

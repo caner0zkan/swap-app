@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Session;
 
 namespace SwapApp.API
 {
@@ -27,8 +28,8 @@ namespace SwapApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             //Session
-            services.AddMvc()
-                .AddSessionStateTempDataProvider();
+            services.AddMvc();
+            services.AddDistributedMemoryCache();
             services.AddSession();
 
             services.AddControllers();

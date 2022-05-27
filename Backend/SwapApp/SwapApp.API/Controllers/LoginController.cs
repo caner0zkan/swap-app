@@ -23,8 +23,8 @@ namespace SwapApp.API.Controllers
             return user;
         }
 
-        int sid;
-        string sname;
+        static int sid;
+        static string sname;
 
         [HttpPost]
         [EnableCors]
@@ -33,11 +33,15 @@ namespace SwapApp.API.Controllers
             var login = context.Users.FirstOrDefault(x => x.Username == user.Username && x.Password == user.Password);
             if(login != null)
             {
-                this.sid = login.ID;
-                this.sname = login.Name;
+                sid = login.ID;
+                sname = login.Name;
 
                 HttpContext.Session.SetString("name", login.Name);
                 HttpContext.Session.SetInt32("id", login.ID);
+
+                //HttpContext.Response.Cookies.Append("cname", login.Name);
+                //HttpContext.Response.Cookies.Append("cid", login.ID.ToString());
+
                 return CreatedAtAction("Get", new { id = login.ID }, login);
             }
             else
@@ -48,14 +52,12 @@ namespace SwapApp.API.Controllers
 
         public int LoginId()
         {
-            //var sessionId = HttpContext.Session.GetInt32("id");
-            return this.sid;
+            return sid;
         }
 
         public string LoginName()
         {
-            //string sessionName = HttpContext.Session.GetString("name");
-            return this.sname;
+            return sname;
         }
 
     }

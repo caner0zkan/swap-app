@@ -26,6 +26,10 @@ export class ProductComponent implements OnInit {
     });
   }
 
+  selectChangeHandler(a:any){
+
+  }
+
   createComment(inputComment:HTMLInputElement){
     const post = {
       name: null,

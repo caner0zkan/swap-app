@@ -22,6 +22,14 @@
     <span>{{items.price}} TL</span>
     <a href="#" class="cart-btn">Teklif Ver</a>
   </div>
+  <select (change)="selectChangeHandler($event)" class="choose" style="margin-top: 20px;" required>
+    <option value="" disabled selected hidden>Lütfen takaslamak istediğiniz ürünü seçin</option>
+    <option value=1>bisiklet/scooter</option>
+    <option value=2>elektronik</option>
+    <option value=3>giyim</option>
+    <option value=4>kitap</option>
+    <option value=5>ev eşyası</option>
+  </select>
 </div>
 
 </main>
