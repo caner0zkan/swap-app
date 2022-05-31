@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   param: any;
   items: any;
   loggedInUser: any;
+  selectedProduct: any;
   selectedValue = 0;
 
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) {
@@ -40,10 +41,19 @@ export class ProductComponent implements OnInit {
   }
 
   Bid(){
-    this.http.patch("http://localhost:18697/api/products/"+this.selectedValue,this.param)
+    var a:any=null;
+    this.http.get("http://localhost:18697/api/products/"+this.selectedValue)
+    .subscribe(response=> {
+      this.selectedProduct = response;
+      console.log(this.selectedProduct.productID);
+    })
+
+    /*this.selectedProduct.productID = this.param;
+
+    this.http.put("http://localhost:18697/api/products",this.selectedProduct)
     .subscribe(response => {
       console.log(response);
-    })
+    })*/
   }
 
   createComment(inputComment:HTMLInputElement){
