@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SwapApp.DataAccess.Abstract;
 using SwapApp.Entities;
 using System;
@@ -34,6 +36,16 @@ namespace SwapApp.DataAccess.Concrete
             {
                 Product product = context.Set<Product>().Include(x => x.Comments).FirstOrDefault(x => x.ID == id);
                 return product;
+            }
+        }
+
+        public void UpdateField(int urlId, int id)
+        {
+            using (var context = new SwapDbContext())
+            {
+                var product = context.Set<Product>().Find(urlId);
+                product.UserID = id;
+                context.SaveChanges();
             }
         }
     }

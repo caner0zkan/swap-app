@@ -27,5 +27,14 @@ namespace SwapApp.DataAccess.Concrete
                 return user;
             }
         }
+
+        public User GetLoggedIn(int id)
+        {
+            using (var context = new SwapDbContext())
+            {
+                User user = context.Set<User>().Include(x => x.Products).FirstOrDefault(x => x.ID == id);
+                return user;
+            }
+        }
     }
 }

@@ -26,6 +26,14 @@ namespace SwapApp.API.Controllers
             return _userService.GetAll();
         }
 
+        [HttpGet("GetLoggedIn")]
+        public User GetLoggedIn()
+        {
+            var login = new LoginController();
+            var id = login.LoginId();
+            return _userService.GetLoggedIn(id);
+        }
+
         [HttpGet("{id}")]
         public User Get(int id)
         {

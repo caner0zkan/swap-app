@@ -38,6 +38,11 @@ namespace SwapApp.Business.Concrete
             return _userRepository.GetById(id);
         }
 
+        public User GetLoggedIn(int id)
+        {
+            return _userRepository.GetLoggedIn(id);
+        }
+
         public void Update(User entity)
         {
             _userRepository.Update(entity);

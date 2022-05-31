@@ -7,6 +7,6 @@ namespace SwapApp.DataAccess.Abstract
 {
     public interface IUserRepository: IRepository<User>
     {
-
+        User GetLoggedIn(int id);
     }
 }

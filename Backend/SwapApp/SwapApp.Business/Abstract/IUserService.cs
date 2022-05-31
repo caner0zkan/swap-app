@@ -11,6 +11,8 @@ namespace SwapApp.Business.Abstract
 
         User GetById(int id);
 
+        User GetLoggedIn(int id);
+
         void Create(User entity);
 
         void Update(User entity);

@@ -39,9 +39,6 @@ namespace SwapApp.API.Controllers
                 HttpContext.Session.SetString("name", login.Name);
                 HttpContext.Session.SetInt32("id", login.ID);
 
-                //HttpContext.Response.Cookies.Append("cname", login.Name);
-                //HttpContext.Response.Cookies.Append("cid", login.ID.ToString());
-
                 return CreatedAtAction("Get", new { id = login.ID }, login);
             }
             else

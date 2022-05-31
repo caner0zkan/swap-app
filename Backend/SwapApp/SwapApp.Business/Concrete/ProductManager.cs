@@ -1,4 +1,5 @@
-﻿using SwapApp.Business.Abstract;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using SwapApp.Business.Abstract;
 using SwapApp.DataAccess.Abstract;
 using SwapApp.DataAccess.Concrete;
 using SwapApp.Entities;
@@ -40,6 +41,11 @@ namespace SwapApp.Business.Concrete
         public void Update(Product entity)
         {
             _productRepository.Update(entity);
+        }
+
+        public void UpdateField(int urlId, int id)
+        {
+            _productRepository.UpdateField(urlId, id);
         }
     }
 }

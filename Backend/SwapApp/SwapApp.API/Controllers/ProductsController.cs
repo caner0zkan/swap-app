@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using SwapApp.Business.Abstract;
 using SwapApp.Entities;
@@ -42,6 +43,12 @@ namespace SwapApp.API.Controllers
         public void Put([FromBody] Product user)
         {
             _productService.Update(user);
+        }
+
+        [HttpPatch("{id}")]
+        public void Patch(int urlId, int id)
+        {
+            _productService.UpdateField(urlId, id);
         }
 
         [HttpDelete("{id}")]

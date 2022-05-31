@@ -12,8 +12,16 @@ export class ProductComponent implements OnInit {
 
   param: any;
   items: any;
+  loggedInUser: any;
+  selectedValue = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
+  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) {
+    http.get("http://localhost:18697/api/users/GetLoggedIn")
+    .subscribe(response=> {
+      this.loggedInUser = response;
+      console.log(response);
+    })
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(p => {
@@ -26,8 +34,16 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  selectChangeHandler(a:any){
+  selectChangeHandler(event:any){
+    this.selectedValue = event.target.value;
+    console.log(this.selectedValue);
+  }
 
+  Bid(){
+    this.http.patch("http://localhost:18697/api/products/"+this.selectedValue,this.param)
+    .subscribe(response => {
+      console.log(response);
+    })
   }
 
   createComment(inputComment:HTMLInputElement){

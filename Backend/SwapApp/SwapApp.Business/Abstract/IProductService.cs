@@ -1,4 +1,5 @@
-﻿using SwapApp.Entities;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using SwapApp.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,8 @@ namespace SwapApp.Business.Abstract
         void Create(Product entity);
 
         void Update(Product entity);
+
+        void UpdateField(int urlId, int id);
 
         void Delete(int id);
     }
