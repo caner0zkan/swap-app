@@ -24,7 +24,7 @@ namespace SwapApp.Entities
         public List<Image> Images { get; set; }
         public List<Bid> Bids { get; set; }
         public List<Comment> Comments { get; set; }
-        public List<Product> Products { get; set; }
+        public List<Product> Offers { get; set; }
 
 
         //Foreign Keys
@@ -36,8 +36,5 @@ namespace SwapApp.Entities
 
         public int ProductStatusID { get; set; }
         public ProductStatus ProductStatus { get; set; }
-
-        public int ProductID { get; set; }
-        public Product Productt { get; set; }
     }
 }
