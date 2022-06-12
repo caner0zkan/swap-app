@@ -24,6 +24,10 @@
     <b><li *ngFor="let item of items.products; let i = index" class="list-group-item" style="height: 50px;">{{items.products[i].title}}
       <button (click)="updateItem(items.products[i].id)" [routerLink]="['updateproduct',items.products[i].id]" type="submit" class="btn btn-primary" style="right: 60px; position: absolute;">Düzenle</button>
       <button (click)="deleteItem(items.products[i].id)" type="submit" class="btn btn-danger" style="right: 10px; position: absolute;">Sil</button>
+      <div *ngIf="items.products[i].fid">
+        <hr>
+        <p>{{items.products[i].ftittle}} ürünü teklif edildi.</p>
+      </div>
     </li></b>
   </ul>
 

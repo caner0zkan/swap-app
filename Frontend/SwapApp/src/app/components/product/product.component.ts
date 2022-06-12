@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
       this.http.get("http://localhost:18697/api/products/"+this.param)
       .subscribe(response=> {
         this.items = response;
-        console.log(response);
+        console.log(this.items);
       })
     });
   }
@@ -41,19 +41,20 @@ export class ProductComponent implements OnInit {
   }
 
   Bid(){
-    var a:any=null;
     this.http.get("http://localhost:18697/api/products/"+this.selectedValue)
     .subscribe(response=> {
       this.selectedProduct = response;
-      console.log(this.selectedProduct.productID);
+      console.log();
     })
 
-    /*this.selectedProduct.productID = this.param;
+    this.items.fid = Number(this.selectedValue);
+    this.items.ftittle = "aaaaa";
+    console.log(this.items);
 
-    this.http.put("http://localhost:18697/api/products",this.selectedProduct)
+    this.http.put("http://localhost:18697/api/products",this.items)
     .subscribe(response => {
       console.log(response);
-    })*/
+    })
   }
 
   createComment(inputComment:HTMLInputElement){
