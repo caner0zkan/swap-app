@@ -19,9 +19,9 @@
     <!--<button type="submit" class="btn btn-success" routerLink="statusproduct" style="margin-left: 10px;">Ürünlerimin Durumu</button>-->
   </div>
 
-  <ul class="list-group mt-5" style="max-width: 1000px;">
+  <ul class="list-group mt-5" style="max-width: 1200px;">
     <h3>Ürünlerim</h3>
-    <b><li *ngFor="let item of items.products; let i = index" class="list-group-item" style="height: 50px;">{{items.products[i].title}} | <strong>Harry Potter Kitap</strong> isimli ürün teklif edildi. <button class="btn btn-success">Kabul et</button> <button class="btn btn-danger">Reddet</button>
+    <b><li *ngFor="let item of items.products; let i = index" class="list-group-item" style="height: 50px;">{{items.products[i].title}}  <p *ngIf="items.products[i].fid" style="display:inline">| Gelen teklif >>> {{items.products[i].ftittle}}</p>
       <button (click)="updateItem(items.products[i].id)" [routerLink]="['updateproduct',items.products[i].id]" type="submit" class="btn btn-primary" style="right: 60px; position: absolute;">Düzenle</button>
       <button (click)="deleteItem(items.products[i].id)" type="submit" class="btn btn-danger" style="right: 10px; position: absolute;">Sil</button>
     </li></b>

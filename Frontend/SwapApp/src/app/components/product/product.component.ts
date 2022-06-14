@@ -48,7 +48,7 @@ export class ProductComponent implements OnInit {
     })
 
     this.items.fid = Number(this.selectedValue);
-    this.items.ftittle = "aaaaa";
+    this.items.ftittle = this.selectedProduct.title;
     console.log(this.items);
 
     this.http.put("http://localhost:18697/api/products",this.items)
