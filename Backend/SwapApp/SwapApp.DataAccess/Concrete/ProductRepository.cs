@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net;
+using System.Net.Mail;
 
 namespace SwapApp.DataAccess.Concrete
 {
@@ -53,12 +55,34 @@ namespace SwapApp.DataAccess.Concrete
         {
             using (var context = new SwapDbContext())
             {
-                Product product1 = context.Products.Find(id);
+                /*Product product1 = context.Products.Find(id);
                 Product product2 = context.Products.Find(product1.Fid);
                 context.Products.Remove(product1);
                 context.Products.Remove(product2);
-                context.SaveChanges();
+                context.SaveChanges();*/
+
+                SendMail();
             }
+        }
+
+        public void SendMail()
+        {
+            MailMessage msg = new MailMessage();
+            msg.Subject = "Takasla.com";
+            msg.From = new MailAddress("canerozkan513@gmail.com", "Caner Özkan");
+            msg.To.Add(new MailAddress("mehmetyilmaz321321321@gmail.com", "Mehmet Yılmaz"));
+            msg.Body = "Adres bilgileri...";
+            msg.Priority = MailPriority.Normal;
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com",587);
+
+            NetworkCredential accountInfo = new NetworkCredential("canerozkan513@gmail.com", "susxvqvanrrctdnv");
+
+            smtp.UseDefaultCredentials = true;
+            smtp.Credentials = accountInfo;
+            smtp.EnableSsl = true;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Send(msg);
         }
     }
 }
