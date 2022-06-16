@@ -19,5 +19,6 @@ namespace SwapApp.Business.Abstract
         void UpdateField(int urlId, int id);
 
         void Delete(int id);
+        void AcceptBid(int id);
     }
 }

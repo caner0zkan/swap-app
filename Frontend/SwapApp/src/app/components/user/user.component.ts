@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
 
   param: any;
   items: any;
+  products: any;
   ngOnInit() {
     this.activatedRoute.params.subscribe(p => {
       this.param = p["id"];
@@ -35,5 +36,32 @@ export class UserComponent implements OnInit {
   public updateItem(id:number){
     return id;
   }
+
+  AcceptBid(id:number){
+    this.http.delete("http://localhost:18697/api/products/AcceptBid/"+id)
+    .subscribe(response => {
+      console.log(response);
+  })
+    console.log("method works!")
+  }
+
+  RejectBid(id:number){
+    this.http.get("http://localhost:18697/api/products/"+id)
+    .subscribe(response=> {
+      this.products = response;
+    })
+
+    this.products.fid = null;
+    this.products.ftittle = null;
+    console.log(this.products);
+
+    this.http.put("http://localhost:18697/api/products",this.products)
+    .subscribe(response => {
+      console.log(response);
+    })
+    window.location.reload();
+  }
+
+
 
 }

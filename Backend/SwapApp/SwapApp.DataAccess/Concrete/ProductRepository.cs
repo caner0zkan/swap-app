@@ -48,5 +48,17 @@ namespace SwapApp.DataAccess.Concrete
                 context.SaveChanges();
             }
         }
+
+        public void AcceptBid(int id)
+        {
+            using (var context = new SwapDbContext())
+            {
+                Product product1 = context.Products.Find(id);
+                Product product2 = context.Products.Find(product1.Fid);
+                context.Products.Remove(product1);
+                context.Products.Remove(product2);
+                context.SaveChanges();
+            }
+        }
     }
 }

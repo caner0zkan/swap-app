@@ -56,5 +56,11 @@ namespace SwapApp.API.Controllers
         {
             _productService.Delete(id);
         }
+
+        [HttpDelete("AcceptBid/{id}")]
+        public void AcceptBid(int id)
+        {
+            _productService.AcceptBid(id);
+        }
     }
 }

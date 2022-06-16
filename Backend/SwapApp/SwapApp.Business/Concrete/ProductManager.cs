@@ -47,5 +47,10 @@ namespace SwapApp.Business.Concrete
         {
             _productRepository.UpdateField(urlId, id);
         }
+
+        public void AcceptBid(int id)
+        {
+            _productRepository.AcceptBid(id);
+        }
     }
 }

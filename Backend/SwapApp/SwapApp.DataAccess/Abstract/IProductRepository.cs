@@ -9,5 +9,6 @@ namespace SwapApp.DataAccess.Abstract
     public interface IProductRepository : IRepository<Product>
     {
         void UpdateField(int urlId, int id);
+        void AcceptBid(int id);
     }
 }

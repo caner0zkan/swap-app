@@ -15,13 +15,13 @@
 
 
   <div class="clearfix">
-    <button type="submit" class="btn btn-success" routerLink="newproduct">Yeni Ürün</button>
+    <button type="submit" class="btn btn-warning" routerLink="newproduct">Yeni Ürün</button>
     <!--<button type="submit" class="btn btn-success" routerLink="statusproduct" style="margin-left: 10px;">Ürünlerimin Durumu</button>-->
   </div>
 
   <ul class="list-group mt-5" style="max-width: 1200px;">
     <h3>Ürünlerim</h3>
-    <b><li *ngFor="let item of items.products; let i = index" class="list-group-item" style="height: 50px;">{{items.products[i].title}}  <p *ngIf="items.products[i].fid" style="display:inline">| Gelen teklif >>> {{items.products[i].ftittle}}</p>
+    <b><li *ngFor="let item of items.products; let i = index" class="list-group-item" style="height: 50px;">{{items.products[i].title}}  <p *ngIf="items.products[i].fid" style="display:inline">| Gelen teklif >>> <a [routerLink]="['/product',items.products[i].fid]">{{items.products[i].ftittle}}</a><button (click)="AcceptBid(items.products[i].id)" style="margin-left: 10px;" class="btn btn-success ">Kabul Et</button><button (click)="RejectBid(items.products[i].id)" style="margin-left: 7px;" class="btn btn-danger">Reddet</button></p>
       <button (click)="updateItem(items.products[i].id)" [routerLink]="['updateproduct',items.products[i].id]" type="submit" class="btn btn-primary" style="right: 60px; position: absolute;">Düzenle</button>
       <button (click)="deleteItem(items.products[i].id)" type="submit" class="btn btn-danger" style="right: 10px; position: absolute;">Sil</button>
     </li></b>
