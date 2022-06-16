@@ -69,14 +69,14 @@ namespace SwapApp.DataAccess.Concrete
         {
             MailMessage msg = new MailMessage();
             msg.Subject = "Takasla.com";
-            msg.From = new MailAddress("canerozkan513@gmail.com", "Caner Özkan");
+            //msg.From = new MailAddress("", "Caner Özkan");
             msg.To.Add(new MailAddress("mehmetyilmaz321321321@gmail.com", "Mehmet Yılmaz"));
             msg.Body = "Adres bilgileri...";
             msg.Priority = MailPriority.Normal;
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com",587);
 
-            NetworkCredential accountInfo = new NetworkCredential("canerozkan513@gmail.com", "susxvqvanrrctdnv");
+            //NetworkCredential accountInfo = new NetworkCredential("", "");
 
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = accountInfo;
