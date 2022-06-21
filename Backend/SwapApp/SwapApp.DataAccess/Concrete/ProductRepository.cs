@@ -55,34 +55,44 @@ namespace SwapApp.DataAccess.Concrete
         {
             using (var context = new SwapDbContext())
             {
-                /*Product product1 = context.Products.Find(id);
+                Product product1 = context.Products.Find(id);
                 Product product2 = context.Products.Find(product1.Fid);
+
+                SendMail(product1.UserID,product2.UserID);
+                SendMail(product2.UserID, product1.UserID);
+
                 context.Products.Remove(product1);
                 context.Products.Remove(product2);
-                context.SaveChanges();*/
-
-                SendMail();
+                context.SaveChanges();
             }
         }
 
-        public void SendMail()
+        public void SendMail(int id1,int id2)
         {
-            MailMessage msg = new MailMessage();
-            msg.Subject = "Takasla.com";
-            //msg.From = new MailAddress("", "Caner Özkan");
-            msg.To.Add(new MailAddress("mehmetyilmaz321321321@gmail.com", "Mehmet Yılmaz"));
-            msg.Body = "Adres bilgileri...";
-            msg.Priority = MailPriority.Normal;
+            using (var context = new SwapDbContext())
+            {
+                User user1 = context.Users.Find(id1);
+                User user2 = context.Users.Find(id2);
+                
 
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com",587);
 
-            //NetworkCredential accountInfo = new NetworkCredential("", "");
+                MailMessage msg = new MailMessage();
+                msg.Subject = "Takasla.com";
+                msg.From = new MailAddress(user1.Email, user1.Name+" "+user1.Surname);
+                msg.To.Add(new MailAddress(user2.Email, user2.Name + " " + user2.Surname));
+                msg.Body = $"Takasınız gerçekleşti... {user1.Name} kişisinin Telefon Numarası: {user1.Phone}";
+                msg.Priority = MailPriority.Normal;
 
-            smtp.UseDefaultCredentials = true;
-            smtp.Credentials = accountInfo;
-            smtp.EnableSsl = true;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Send(msg);
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+
+                NetworkCredential accountInfo = new NetworkCredential("canerozkan513@gmail.com", "susxvqvanrrctdnv");
+
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = accountInfo;
+                smtp.EnableSsl = true;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Send(msg);
+            }
         }
     }
 }
